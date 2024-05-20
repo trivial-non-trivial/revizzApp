@@ -67,37 +67,37 @@ object RevizzFrontEndModule extends ScalaJSModule with RevizzModule {
     println("Build:: " + this.fastLinkJS())
 
     val srcIco = "RevizzFrontEnd/src/main/resources/favicon.ico"
-    val destIco = "RevizzBackEnd/App/src/main/resources/favicon.ico"
+    val destIco = "RevizzBackEnd/src/main/resources/favicon.ico"
     os.proc("cp", srcIco, destIco).call()
     println("Copy :: " + srcIco)
 
     val srcHtml = "RevizzFrontEnd/src/main/resources/index.html"
-    val destHtml = "RevizzBackEnd/App/src/main/resources/index.html"
+    val destHtml = "RevizzBackEnd/src/main/resources/index.html"
     os.proc("cp", srcHtml, destHtml).call()
     println("Copy :: " + srcHtml)
 
     val srcCss = "RevizzFrontEnd/src/main/resources/styles"
-    val destCss = "RevizzBackEnd/App/src/main/resources/"
+    val destCss = "RevizzBackEnd/src/main/resources/"
     os.proc("cp", "-r", srcCss, destCss).call()
     println("Copy :: " + srcCss)
 
 //    val srcCards = "RevizzFrontEnd/src/main/resources/cards"
-//    val destCards = "RevizzBackEnd/App/src/main/resources/"
+//    val destCards = "RevizzBackEnd/src/main/resources/"
 //    os.proc("cp", "-r", srcCards, destCards).call()
 //    println("Copy :: " + srcCards)
 //
 //    val srcOthers = "RevizzFrontEnd/src/main/resources/others"
-//    val destOthers = "RevizzBackEnd/App/src/main/resources/"
+//    val destOthers = "RevizzBackEnd/src/main/resources/"
 //    os.proc("cp", "-r", srcOthers, destOthers).call()
 //    println("Copy :: " + srcOthers)
 
     val srcJs = "out/RevizzFrontEndModule/fastLinkJS.dest/main.js"
-    val destJs = "RevizzBackEnd/App/src/main/resources/"
+    val destJs = "RevizzBackEnd/src/main/resources/"
     os.proc("cp", srcJs, destJs).call()
     println("Copy :: " + srcJs)
 
     val srcJsMap = "out/RevizzFrontEndModule/fastLinkJS.dest/main.js.map"
-    val destJsMap = "RevizzBackEnd/App/src/main/resources/"
+    val destJsMap = "RevizzBackEnd/src/main/resources/"
     os.proc("cp", srcJsMap, destJsMap).call()
     println("Copy :: " + srcJsMap)
 
