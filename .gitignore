@@ -1,5 +1,8 @@
 /out
 /project
-/RevizzBackEnd/App/src/main/resources/config/config.properties
 /.idea/
 /.idea
+/RevizzBackEnd/RevizzBackEnd.iml
+/RevizzFrontEnd/RevizzFrontEnd.iml
+/RevizzPublic/RevizzPublic.iml
+/RevizzBackEnd/src/main/resources/config/config.properties

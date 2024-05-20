@@ -1,15 +1,7 @@
 package app
 
-import cask.Logger.Console.globalLogger
-import cask.WsChannelActor
-import cask.util.Ws
-import upickle.default._
-import upickle.implicits._
 import model.User
-import src.main.scala.repository.{DbSession, UserDao}
-
-import scala.collection.mutable
-import scala.util.{Failure, Success, Try}
+import src.main.scala.repository.{UserDao}
 
 object Main extends cask.MainRoutes {
 

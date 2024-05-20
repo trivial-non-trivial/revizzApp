@@ -24,12 +24,12 @@ object RevizzBackEndModule extends RevizzModule {
   override def sources = T.sources {
     super.sources() ++
       Seq(PathRef(baseDir / "RevizzPublic")) ++
-      Seq(PathRef(baseDir  / Seq("RevizzBackEnd", "App")))
+      Seq(PathRef(baseDir  / Seq("RevizzBackEnd")))
   }
 
   override def resources = T.sources {
     super.sources() ++
-      Seq(PathRef(baseDir  / Seq("RevizzBackEnd", "App")))
+      Seq(PathRef(baseDir  / Seq("RevizzBackEnd")))
   }
 
   override def mainClass = Some("app.Main")
