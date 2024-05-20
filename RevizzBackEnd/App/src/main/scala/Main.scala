@@ -6,6 +6,7 @@ import cask.util.Ws
 import upickle.default._
 import upickle.implicits._
 import model.User
+import src.main.scala.repository.{DbSession, UserDao}
 
 import scala.collection.mutable
 import scala.util.{Failure, Success, Try}
@@ -13,6 +14,8 @@ import scala.util.{Failure, Success, Try}
 object Main extends cask.MainRoutes {
 
   println(s"\nServing at http://localhost:8080/revizz/User-001/index.html \n")
+
+  UserDao.findUser(1).map(s => println(s.getOrElse(User(0, "_", "_"))))
 
   @cask.staticFiles("/revizz/:User_id/:filename",
     headers = Seq("Accept" -> "text/css, text/javascript, text/html, image/png, image/avif,image/webp,*/*",

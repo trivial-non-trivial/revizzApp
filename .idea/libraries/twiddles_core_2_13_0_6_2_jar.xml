@@ -1,0 +1,10 @@
+<component name="libraryTable">
+    <library name="twiddles-core_2.13-0.6.2.jar">
+        <CLASSES>
+            <root url="jar://$PROJECT_DIR$/../../.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/twiddles-core_2.13/0.6.2/twiddles-core_2.13-0.6.2.jar!/"/>
+        </CLASSES>
+        <SOURCES>
+            <root url="jar://$PROJECT_DIR$/../../.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/twiddles-core_2.13/0.6.2/twiddles-core_2.13-0.6.2-sources.jar!/"/>
+        </SOURCES>
+    </library>
+</component>

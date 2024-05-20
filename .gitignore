@@ -1,1 +1,4 @@
-/out/
+out
+project
+.idea
+RevizzBackEnd/App/src/main/resources/config/config.properties

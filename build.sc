@@ -27,11 +27,21 @@ object RevizzBackEndModule extends RevizzModule {
       Seq(PathRef(baseDir  / Seq("RevizzBackEnd", "App")))
   }
 
+  override def resources = T.sources {
+    super.sources() ++
+      Seq(PathRef(baseDir  / Seq("RevizzBackEnd", "App")))
+  }
+
   override def mainClass = Some("app.Main")
 
   override def ivyDeps = super.ivyDeps() ++ Seq(
     ivy"com.lihaoyi::cask:0.9.2",
-    ivy"com.lihaoyi::mill-scalalib:0.11.6"
+    ivy"com.lihaoyi::mill-scalalib:0.11.6",
+    ivy"co.fs2::fs2-core:3.10.2",
+    ivy"co.fs2::fs2-io:3.10.2",
+    ivy"co.fs2::fs2-scodec:3.10.2",
+    ivy"org.typelevel::cats-effect:3.5.4",
+    ivy"org.tpolecat::skunk-core:0.6.3"
   )
 }
 

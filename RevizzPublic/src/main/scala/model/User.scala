@@ -1,3 +1,3 @@
 package model
 
-case class User()
+case class User(id: Int, pseudo: String, passwd: String)

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzfrontendmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzfrontendmodule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzpublicmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzpublicmodule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/mill-build.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/mill-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzbackendmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzbackendmodule.iml" />
-    </modules>
-  </component>
+    <component name="ProjectModuleManager">
+        <modules>
+            <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/mill-build.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/mill-build.iml"/>
+            <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzbackendmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzbackendmodule.iml"/>
+            <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzfrontendmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzfrontendmodule.iml"/>
+            <module fileurl="file://$PROJECT_DIR$/.idea/mill_modules/revizzpublicmodule.iml" filepath="$PROJECT_DIR$/.idea/mill_modules/revizzpublicmodule.iml"/>
+        </modules>
+    </component>
 </project>
