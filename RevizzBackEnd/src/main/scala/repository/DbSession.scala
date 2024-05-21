@@ -42,9 +42,15 @@ object DbSession extends IOApp {
 
   def dbState() = {
     println(s"---- db state ----")
+    val y = getConnexion().yolo // a stable reference is required
+    import y._
 
     val sql = sql"""select current_date""".query[String].unique
-    println(sql.transact(getConnexion()).unsafeRunSync())
+    sql.quick.unsafeRunSync() // print value
+
+    val date = sql.transact(getConnexion()).unsafeRunSync()
+    val localDate: LocalDate = LocalDate.parse(date)
+    println(localDate.getDayOfWeek)
   }
 
   override def run(args: List[String]): IO[ExitCode] = {

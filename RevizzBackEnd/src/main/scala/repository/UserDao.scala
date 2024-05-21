@@ -9,6 +9,8 @@ import cats.implicits._
 import doobie._
 import doobie.implicits._
 import doobie.syntax.SqlInterpolator
+import RepositoryDao._
+import RepositoryDao.yolo._
 
 object UserDao extends RepositoryDao {
 
@@ -18,7 +20,9 @@ object UserDao extends RepositoryDao {
        where u.user_i_id = $id"""
       .query[User].option
 
+    // sql.quick.unsafeRunSync() yolo -> Unit
     sql.transact(dbConnexion).unsafeRunSync()
+
   }
 
 }

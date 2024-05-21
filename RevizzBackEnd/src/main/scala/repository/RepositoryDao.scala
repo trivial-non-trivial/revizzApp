@@ -12,5 +12,8 @@ import doobie.syntax.SqlInterpolator
 trait RepositoryDao {
 
   val dbConnexion = DbSession.getConnexion()
+}
 
+object RepositoryDao {
+  val yolo = DbSession.getConnexion().yolo // a stable reference is required
 }
