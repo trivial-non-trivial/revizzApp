@@ -37,11 +37,9 @@ object RevizzBackEndModule extends RevizzModule {
   override def ivyDeps = super.ivyDeps() ++ Seq(
     ivy"com.lihaoyi::cask:0.9.2",
     ivy"com.lihaoyi::mill-scalalib:0.11.6",
-    ivy"co.fs2::fs2-core:3.10.2",
-    ivy"co.fs2::fs2-io:3.10.2",
-    ivy"co.fs2::fs2-scodec:3.10.2",
-    ivy"org.typelevel::cats-effect:3.5.4",
-    ivy"org.tpolecat::skunk-core:0.6.3"
+    ivy"org.tpolecat::doobie-core:1.0.0-RC5",
+    ivy"org.tpolecat::doobie-postgres:1.0.0-RC5",
+    ivy"org.tpolecat::doobie-specs2:1.0.0-RC5"
   )
 }
 

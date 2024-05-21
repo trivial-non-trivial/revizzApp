@@ -1,27 +1,24 @@
-package src.main.scala.repository
+package repository
 
-import cats.effect.unsafe.implicits.global
-import cats.effect.{ExitCode, IO}
 import model.User
-import skunk.Query
-import skunk.codec.all.{date, int4, varchar}
-import skunk.implicits.toStringOps
-import src.main.scala.repository.DbSession.getDbSession
+import cats._
+import cats.effect.{IO, _}
+import cats.effect.unsafe.implicits.global
+import cats.data._
+import cats.implicits._
+import doobie._
+import doobie.implicits._
+import doobie.syntax.SqlInterpolator
 
 object UserDao extends RepositoryDao {
 
-  def findUser(id: Int): IO[Option[User]] = {
-    val sql: Query[Int, User] = sql"""
+  def findUser(id: Int): Option[User] = {
+    val sql = sql"""
     select * from "revizzApp"."User" u
-       where u.user_i_id = $int4"""
-    .query(int4 *: varchar *: varchar).to[User]
+       where u.user_i_id = $id"""
+      .query[User].option
 
-    getDbSession().use { session =>
-      session.prepare(sql).map { pc =>
-        val r = pc.option(id)
-        r.flatMap(u => IO.println(u))
-      }.unsafeRunSync()
-    }.unsafeRunSync()
-    IO(None)
+    sql.transact(dbConnexion).unsafeRunSync()
   }
+
 }

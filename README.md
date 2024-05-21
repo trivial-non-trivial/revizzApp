@@ -3,7 +3,7 @@
 - cask
 - upickle
 - cats effect
-- skunk
+- doobie
 
 **Front end**
 - mill

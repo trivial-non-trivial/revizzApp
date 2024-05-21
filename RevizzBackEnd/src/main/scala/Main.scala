@@ -1,13 +1,14 @@
 package app
 
 import model.User
-import src.main.scala.repository.{UserDao}
+import repository.{UserDao}
 
 object Main extends cask.MainRoutes {
 
   println(s"\nServing at http://localhost:8080/revizz/User-001/index.html \n")
 
-  UserDao.findUser(1).map(s => println(s.getOrElse(User(0, "_", "_"))))
+  println(repository.UserDao.findUser(1))
+  println(repository.UserDao.findUser(0))
 
   @cask.staticFiles("/revizz/:User_id/:filename",
     headers = Seq("Accept" -> "text/css, text/javascript, text/html, image/png, image/avif,image/webp,*/*",
